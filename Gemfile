@@ -38,6 +38,7 @@ gem 'forem', :github => 'radar/forem', :branch => 'rails4'
 gem 'will_paginate', '3.0.5'
 
 gem 'forem-bootstrap', :github => 'radar/forem-bootstrap'
+gem 'bootstrap_form', :github => 'grasshopper1/rails-bootstrap-forms'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

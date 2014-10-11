@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require 'forem/base'
+ *= require rails_bootstrap_forms
  *= require_tree .
  */
