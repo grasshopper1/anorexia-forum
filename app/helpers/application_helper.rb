@@ -41,4 +41,12 @@ module ApplicationHelper
 
 		html.html_safe
 	end
+
+	# TODO Comment me
+	def with_optional_help(options, help_text, boolean)
+		options.delete(:help)
+		options.merge!(:help => help_text) if boolean
+
+		return options
+	end
 end
