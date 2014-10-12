@@ -1,35 +1,22 @@
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
-
-    <div class="form-group">
-      <%= f.label :email, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-6">
-        <%= f.email_field :email, class: 'form-control' %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :password, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-6">
-        <%= f.password_field :password, autocomplete: 'off', class: 'form-control' %>
-      </div>
-    </div>
+<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name), layout: :horizontal) do |f| %>
+    <%= f.email_field( :email, :control_col => 'col-sm-6' ) %>
+    <%= f.password_field( :password, :control_col => 'col-sm-6', :autocomplete => 'off' ) %>
 
     <% if devise_mapping.rememberable? -%>
         <div class="form-group">
           <div class="col-sm-6 col-sm-offset-2">
-            <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+            <%= f.check_box :remember_me %>
           </div>
         </div>
     <% end -%>
 
     <div class="form-group">
-      <div class="col-sm-6 col-sm-offset-2">
-        <%= f.submit 'Sign in', class: 'btn btn-primary' %>
+      <div class="col-sm-offset-2 col-sm-6">
+        <%= f.primary 'Sign in' %>
       </div>
     </div>
-
 <% end %>
 
 <div class="form-group">
