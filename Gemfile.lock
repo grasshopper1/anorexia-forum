@@ -184,6 +184,7 @@ DEPENDENCIES
   rails (= 4.0.3)
   sass-rails (~> 4.0.3)
   sdoc
+  select2-rails
   sqlite3
   therubyracer
   turbolinks
