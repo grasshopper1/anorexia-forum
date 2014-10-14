@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006210622) do
+ActiveRecord::Schema.define(version: 20141014193420) do
+
+  create_table "countries", force: true do |t|
+    t.string   "locale"
+    t.string   "language"
+    t.string   "plural"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "country_translations", force: true do |t|
+    t.integer  "country_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "language"
+  end
+
+  add_index "country_translations", ["country_id"], name: "index_country_translations_on_country_id"
+  add_index "country_translations", ["locale"], name: "index_country_translations_on_locale"
 
   create_table "forem_categories", force: true do |t|
     t.string   "name",       null: false
@@ -126,6 +145,7 @@ ActiveRecord::Schema.define(version: 20141006210622) do
     t.boolean  "forem_auto_subscribe",   default: false
     t.string   "name"
     t.integer  "roles_mask"
+    t.integer  "country_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

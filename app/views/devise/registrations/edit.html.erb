@@ -5,9 +5,10 @@
     <%= f.email_field( :email, :control_col => 'col-sm-6' ) %>
     <%= f.password_field( :password, :control_col => 'col-sm-6', :autocomplete => 'off' ) %>
     <%= f.password_field( :password_confirmation, :control_col => 'col-sm-6', :autocomplete => 'off' ) %>
-    <%= f.password_field( :current_password, :control_col => 'col-sm-6', :autocomplete => 'off', :help => '(we need your current password to confirm your changes)' ) %>
+    <%= f.password_field( :current_password, :control_col => 'col-sm-6', :autocomplete => 'off', :help => "(#{t('devise.registrations.confirmation_info')})" ) %>
+    <%= f.select :country_id, Country.all.collect { |c| [c.language, c.id] }, :control_col => 'col-sm-6', :label => t('devise.registrations.language') %>
 
-    <div class="form-group new">
+    <div class="form-group">
       <%= f.collection_check_boxes :roles, User::ROLES, :to_s, :humanize %>
     </div>
 

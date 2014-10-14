@@ -3,7 +3,8 @@
 <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name), layout: :horizontal) do |f| %>
     <%= f.text_field( :name, :control_col => 'col-sm-6' ) %>
     <%= f.email_field( :email, :control_col => 'col-sm-6' ) %>
-    <%= f.password_field( :password, with_optional_help({:control_col => 'col-sm-6', :autocomplete => 'off'}, "(#{@minimum_password_length} characters minimum)", @validatable) ) %>
+    <%= f.select_with_bootstrap :country_id, Country.all.collect { |c| [c.language, c.id] }, :control_col => 'col-sm-6', :label => t('devise.registrations.language') %>
+    <%= f.password_field( :password, with_optional_help({:control_col => 'col-sm-6', :autocomplete => 'off'}, "(#{t('devise.registrations.password_info', :count => @minimum_password_length.to_s)})", @validatable) ) %>
     <%= f.password_field( :password_confirmation, :control_col => 'col-sm-6', :autocomplete => 'off' ) %>
 
     <div class="form-group">
