@@ -1,9 +1,13 @@
-<%= simple_form_for [forem, @forum, @topic] do |f| %>
-  <%= f.input :subject %>
+<%= bootstrap_form_for([forem, @forum, @topic], :layout => :horizontal) do |f| %>
+    <%= f.text_field( :subject, :control_col => 'col-sm-6' ) %>
 
-  <%= f.simple_fields_for :posts do |post| %>
-    <%= render :partial => "forem/posts/form", :locals => { :f => post }%>
-  <% end %>
-  
-  <%= f.submit :class => "btn btn-primary" %>
+    <%= f.simple_fields_for :posts do |post| %>
+        <%= render :partial => "forem/posts/form", :locals => { :f => post }%>
+    <% end %>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+        <%= f.primary %>
+      </div>
+    </div>
 <% end %>

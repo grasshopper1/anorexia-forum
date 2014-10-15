@@ -2,7 +2,12 @@
 
 <h2><%= t("forem.post.edit", :post => @post) %></h2>
 
-<%= simple_form_for [forem, @topic.forum, @topic, @post] do |f| %>
+<%= bootstrap_form_for([forem, @topic.forum, @topic, @post], :layout => :horizontal) do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
-  <%= f.submit t("forem.post.buttons.edit"), :class => "btn btn-primary" %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-6">
+      <%= f.primary t("forem.post.buttons.reply") %>
+    </div>
+  </div>
 <% end %>
