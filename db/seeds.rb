@@ -1,5 +1,3 @@
-User.create!(:name => 'Administrator', :email => 'admin@anorexia-forum.com', :password => 'password', :password_confirmation => 'password', :roles => ['admin'])
-
 # languages available
 languages = {
 		:en =>
@@ -22,9 +20,9 @@ languages = {
 				},
 }
 
-en_country = Country.new(:locale => :en, :plural => 'England')
-nl_country = Country.new(:locale => :nl, :plural => 'Nederland')
-de_country = Country.new(:locale => :de, :plural => 'Deutschland')
+en_country = Country.new(:locale => :en, :plural => 'England', :route_name => 'english')
+nl_country = Country.new(:locale => :nl, :plural => 'Nederland', :route_name => 'nederlands')
+de_country = Country.new(:locale => :de, :plural => 'Deutschland', :route_name => 'deutsch')
 
 # Assign correct language globalization to countries.
 languages.each do |locale, languages|
@@ -44,3 +42,15 @@ languages.each do |locale, languages|
 		country.save
 	end
 end
+
+User.create!(:name => 'Administrator',
+             :email => 'admin@anorexia-forum.com',
+             :password => 'password',
+             :password_confirmation => 'password',
+             :roles => ['admin'],
+             :country_id => en_country.id)
+
+# Keep this in track with the route_names of the countries!
+Forem::Category.create!(:name => 'English')
+Forem::Category.create!(:name => 'Nederlands')
+Forem::Category.create!(:name => 'Deutsch')

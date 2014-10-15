@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014193420) do
+ActiveRecord::Schema.define(version: 20141015200313) do
 
   create_table "countries", force: true do |t|
     t.string   "locale"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141014193420) do
     t.string   "plural"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "route_name"
   end
 
   create_table "country_translations", force: true do |t|
