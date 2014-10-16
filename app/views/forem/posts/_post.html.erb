@@ -16,16 +16,19 @@
       </div>
     <% end %>
 
-    <div class='contents'>
       <div class='user col-md-2'>
-        <div class='username'>
-          <% if post.user.is_a?(Forem::NilUser) %>
-            <%= t(:deleted) %>
-          <% else %>
-            <%= link_to_if Forem.user_profile_links, post.user.forem_name, [main_app, post.user] %>
-          <% end %>
+        <div class="media">
+          <a class="pull-left">
+            <%= forem_avatar(post.user, :size => 60, :html => {class: 'media-object'}) %>
+          </a>
+          <div class="media-body">
+              <% if post.user.is_a?(Forem::NilUser) %>
+                  <%= t(:deleted) %>
+              <% else %>
+                  <%= link_to_if Forem.user_profile_links, post.user.forem_name, [main_app, post.user] %>
+              <% end %>
+          </div>
         </div>
-        <div class='icon'><%= forem_avatar(post.user, :size => 60) %></div>
       </div>
 
       <div class='contents col-md-7'>
@@ -34,11 +37,13 @@
         </a>
         <%= forem_format(post.text) %>
 
-        <% if post.reply_to %>
-          <div class='in-reply-to'>
-            <%= link_to "#{t("forem.post.in_reply_to")} #{post.reply_to.user.forem_name}", "#post-#{post.reply_to.id}" %>
+        <div class="form-group">
+            <% if post.reply_to %>
+              <div class='in-reply-to'>
+                <%= link_to "#{t("forem.post.in_reply_to")} #{post.reply_to.user.forem_name}", "#post-#{post.reply_to.id}" %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
 
         <% if forem_user %>
           <div class='btn-group'>
@@ -60,5 +65,4 @@
         <% end %>
       </div>
     </div>
-  </div>
 </div>

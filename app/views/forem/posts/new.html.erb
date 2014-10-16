@@ -1,20 +1,23 @@
 <%= render :partial => 'forem/forums/head', :locals => { :forum => @topic.forum } %>
 
-<h2>
-  <%= t("forem.post.new") %>
-  <% if @reply_to_post %>
+<% if @reply_to_post %>
     <%= render 'reply_to_post', :post => @reply_to_post %>
-  <% else %>
-    <em><%= @topic.subject %></em>
-  <% end %>
-</h2>
+<% else %>
+    <div class="panel panel-primary">
+      <div class="panel-heading"><%= t("forem.post.new") %></div>
+      <div class="panel-body text-center">
+        <em><%= @topic.subject %></em>
+      </div>
+    </div>
+<% end %>
+
 
 <%= bootstrap_form_for([forem, @topic.forum, @topic, @post], :layout => :horizontal) do |f| %>
-  <%= render :partial => "form", :locals => { :f => f } %>
+    <%= render :partial => "form", :locals => { :f => f } %>
 
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-6">
-      <%= f.primary t("forem.post.buttons.reply") %>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+        <%= f.primary t("forem.post.buttons.reply") %>
+      </div>
     </div>
-  </div>
 <% end %>
