@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ForumTest::Application.load_tasks
+AnorexiaForum::Application.load_tasks
