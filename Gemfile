@@ -32,12 +32,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'devise'
+gem 'devise', '3.4.0'
 
-gem 'forem', :github => 'radar/forem', :branch => 'rails4'
+gem 'forem', :github => 'radar/forem', :branch => 'rails4', :ref => 'dee7350f3bd117d0a7edd8623ce29cdfe4f7c062'
 gem 'will_paginate', '3.0.5'
 
-gem 'forem-bootstrap', :github => 'radar/forem-bootstrap'
+gem 'forem-bootstrap', :github => 'radar/forem-bootstrap', :ref => '10be50afc1d0a22af1306076e41624c55fc585be'
 gem 'bootstrap_form', :github => 'grasshopper1/rails-bootstrap-forms'
 gem 'select2-rails'
 gem 'globalize', '~> 4.0.2'

@@ -7,6 +7,7 @@ GIT
 GIT
   remote: git://github.com/radar/forem-bootstrap.git
   revision: 10be50afc1d0a22af1306076e41624c55fc585be
+  ref: 10be50afc1d0a22af1306076e41624c55fc585be
   specs:
     forem-bootstrap (0.0.1)
       bootstrap-sass (~> 3.1)
@@ -14,6 +15,7 @@ GIT
 GIT
   remote: git://github.com/radar/forem.git
   revision: dee7350f3bd117d0a7edd8623ce29cdfe4f7c062
+  ref: dee7350f3bd117d0a7edd8623ce29cdfe4f7c062
   branch: rails4
   specs:
     forem (1.0.0.beta1)
@@ -179,7 +181,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap_form!
   coffee-rails (~> 4.0.0)
-  devise
+  devise (= 3.4.0)
   forem!
   forem-bootstrap!
   globalize (~> 4.0.2)
