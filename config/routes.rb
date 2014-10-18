@@ -1,4 +1,4 @@
-ForumTest::Application.routes.draw do
+AnorexiaForum::Application.routes.draw do
 
   get "info_page/about"
 	# This line mounts Forem's routes at /forums by default.

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ForumTest::Application.config.secret_key_base = '1f96d97a3147140e57fca55f82831ee635ac37509d19974d88306cb967fe9207d82f6b78f2546d99850b7f0c4ed75dc63261db4ba54f76e0ebf709ad38a88688'
+AnorexiaForum::Application.config.secret_key_base = '1f96d97a3147140e57fca55f82831ee635ac37509d19974d88306cb967fe9207d82f6b78f2546d99850b7f0c4ed75dc63261db4ba54f76e0ebf709ad38a88688'
