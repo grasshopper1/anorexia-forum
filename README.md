@@ -26,6 +26,12 @@ To install emoji icons run:
 bundle exec rake emoji
 ```
 
+Assets need to be pre-compiled for production-mode, this can be done by typing:
+
+```shell
+bundle exec rake assets:precompile
+```
+
 == Starting application
 
 To allow mailing environment variables are required, these can be set in different manners: see [http://railsapps.github.io/rails-environment-variables.html](http://railsapps.github.io/rails-environment-variables.html)
