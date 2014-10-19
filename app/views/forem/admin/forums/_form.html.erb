@@ -3,9 +3,11 @@
   <%= f.text_field( :description, :control_col => 'col-sm-6' ) %>
   <%= f.text_field( :title, :error_attr => :name, :control_col => 'col-sm-6' ) %>
 
-  <div class="form-group">
-    <%= f.collection_check_boxes :moderator_ids, Forem::Group.all, :id, :name, :label => t('forem.admin.forum.moderator_groups') %>
-  </div>
+  <% unless Forem::Group.all.empty? %>
+    <div class="form-group">
+      <%= f.collection_check_boxes :moderator_ids, Forem::Group.all, :id, :name, :label => t('forem.admin.forum.moderator_groups') %>
+    </div>
+  <% end %>
 
   <div class="form-group">
     <%= f.primary %>
