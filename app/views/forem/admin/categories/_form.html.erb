@@ -2,6 +2,8 @@
     <%= f.text_field( :name, :control_col => 'col-sm-6' ) %>
 
     <div class="form-group">
-      <%= f.primary t("forem.admin.categories.#{view}") %>
+      <div class="col-sm-offset-2 col-sm-6">
+        <%= f.primary t("forem.admin.categories.#{view}") %>
+      </div>
     </div>
 <% end %>
