@@ -184,6 +184,7 @@ DEPENDENCIES
   devise (= 3.4.0)
   forem!
   forem-bootstrap!
+  gemoji
   globalize (~> 4.0.2)
   jbuilder (~> 1.2)
   jquery-rails

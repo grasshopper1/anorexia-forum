@@ -41,6 +41,7 @@ gem 'forem-bootstrap', :github => 'radar/forem-bootstrap', :ref => '10be50afc1d0
 gem 'bootstrap_form', :github => 'grasshopper1/rails-bootstrap-forms'
 gem 'select2-rails'
 gem 'globalize', '~> 4.0.2'
+gem 'gemoji'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
