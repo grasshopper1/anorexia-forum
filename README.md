@@ -28,6 +28,12 @@ bundle exec rake emoji
 
 == Starting application
 
+To allow mailing environment variables are required, these can be set in different manners: see [http://railsapps.github.io/rails-environment-variables.html](http://railsapps.github.io/rails-environment-variables.html)
+The following environment variables are used for mailing. These variables require a username and password for a gmail-account.
+
+- mailer_username
+- mailer_password
+
 The application can be started in the foreground by using:
 
 ```shell
