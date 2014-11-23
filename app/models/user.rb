@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 	devise :database_authenticatable, :registerable,
 	       :recoverable, :rememberable, :trackable, :validatable
 
+	acts_as_voter
+
 	validates :name, presence: true
 	validates :name, uniqueness: true
 

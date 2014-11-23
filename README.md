@@ -32,6 +32,16 @@ Assets need to be pre-compiled for production-mode, this can be done by typing:
 bundle exec rake assets:precompile
 ```
 
+To use [http://www.highcharts.com](www.highcharts.com) for showing polls, which doesn't require an internet connection, download it at 
+And place highcharts.js in app/assets/javascripts and configure opinion correctly (in the initializer) by using the configure method.
+
+```ruby
+Opinion.configure do |config|
+  config.charts_engine = :highcharts
+  config.charts_engine_location = 'highcharts.js'
+end
+```
+
 == Starting application
 
 To allow mailing environment variables are required, these can be set in different manners: see [http://railsapps.github.io/rails-environment-variables.html](http://railsapps.github.io/rails-environment-variables.html)

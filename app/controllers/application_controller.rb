@@ -1,21 +1,8 @@
 class ApplicationController < ActionController::Base
 
-	def forem_user
-		current_user
-	end
-	helper_method :forem_user
-
-	# Copied from Forem::ApplicationController, because helper was not available here.
-	def forem_admin?
-		forem_user && forem_user.forem_admin?
-	end
-	helper_method :forem_admin?
-
-	# Copied from Forem::ApplicationController, because helper was not available here.
-	def forem_admin_or_moderator?(forum)
-		forem_user && (forem_user.forem_admin? || forum.moderator?(forem_user))
-	end
-	helper_method :forem_admin_or_moderator?
+	# We want the forem module available in the views and controller.
+	helper ForemHelper
+	include ForemHelper
 
 	# Prevent CSRF attacks by raising an exception.
 	# For APIs, you may want to use :null_session instead.

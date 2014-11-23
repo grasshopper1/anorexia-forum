@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141015200313) do
+ActiveRecord::Schema.define(version: 20141122191417) do
 
   create_table "countries", force: true do |t|
     t.string   "locale"
@@ -127,6 +127,34 @@ ActiveRecord::Schema.define(version: 20141015200313) do
   add_index "forem_views", ["updated_at"], name: "index_forem_views_on_updated_at"
   add_index "forem_views", ["user_id"], name: "index_forem_views_on_user_id"
   add_index "forem_views", ["viewable_id"], name: "index_forem_views_on_viewable_id"
+
+  create_table "opinion_options", force: true do |t|
+    t.string   "description"
+    t.integer  "poll_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "opinion_polls", force: true do |t|
+    t.string   "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "state"
+  end
+
+  create_table "opinion_votes", force: true do |t|
+    t.boolean  "vote",          default: false, null: false
+    t.integer  "voteable_id",                   null: false
+    t.string   "voteable_type",                 null: false
+    t.integer  "voter_id"
+    t.string   "voter_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "opinion_votes", ["voteable_id", "voteable_type"], name: "index_opinion_votes_on_voteable_id_and_voteable_type"
+  add_index "opinion_votes", ["voter_id", "voter_type", "voteable_id", "voteable_type"], name: "fk_one_vote_per_user_per_entity", unique: true
+  add_index "opinion_votes", ["voter_id", "voter_type"], name: "index_opinion_votes_on_voter_id_and_voter_type"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",               null: false

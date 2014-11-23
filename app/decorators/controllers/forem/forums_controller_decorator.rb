@@ -1,4 +1,6 @@
 Forem::ForumsController.class_eval do
+	# include ForemHelper
+
 	def index
 		if forem_admin?
 			@categories = Forem::Category.all

@@ -1,11 +1,11 @@
 module ApplicationHelper
-	def bootstrap_devise_error_messages!
-		return '' if resource.errors.empty?
+	def bootstrap_devise_error_messages!(object = resource)
+		return '' if object.errors.empty?
 
-		messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+		messages = object.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
 		sentence = I18n.t('errors.messages.not_saved',
-		                  count: resource.errors.count,
-		                  resource: resource.class.model_name.human.downcase)
+		                  count: object.errors.count,
+		                  resource: object.class.model_name.human.downcase)
 
 		html = <<-HTML
 	<div class="alert alert-danger alert-block">

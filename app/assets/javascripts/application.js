@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_nested_form
+//= require bootstrap-sprockets
+//= require chartkick
+//= require opinion/polls
 //= require turbolinks
 //= require select2
 //= require forem
