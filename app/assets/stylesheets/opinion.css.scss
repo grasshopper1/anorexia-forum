@@ -1,2 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// fix outlining, looks like there should be a better solution.
+#option_fields {
+  margin-left: -2px;
+}
+
+// fix outlining, looks like there should be a better solution.
+.glyphicon-remove {
+  top: 0;
+}
