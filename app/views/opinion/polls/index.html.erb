@@ -1,0 +1,14 @@
+<% if @polls.empty? %>
+  <h1>No Polls defined</h1>
+<% else %>
+
+  <% # pass items as objects, collections will iterate, which is controlled in the partial (for now) %>
+  <%= render partial: 'active', object: @polls.active %>
+  <%= render partial: 'pending', object: @polls.pending %>
+  <%= render partial: 'ended', object: @polls.ended %>
+
+<% end %>
+
+<br>
+
+<%= link_to( 'New Poll', new_poll_path, :class => 'btn btn-primary') %>
