@@ -43,7 +43,7 @@ gem 'select2-rails'
 gem 'globalize', '~> 4.0.2'
 gem 'gemoji'
 
-gem 'opinion', '0.5.3', :git => 'https://github.com/grasshopper1/Opinion.git'
+gem 'opinion', '0.5.4', :git => 'https://github.com/grasshopper1/Opinion.git'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
