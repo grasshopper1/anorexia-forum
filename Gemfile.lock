@@ -31,9 +31,9 @@ GIT
 
 GIT
   remote: https://github.com/grasshopper1/Opinion.git
-  revision: 3dc32656128e03b5290e9b0f08769414442e8d8f
+  revision: 60051a7bc1af368f23cfc26842eed340aa74280d
   specs:
-    opinion (0.5.4)
+    opinion (0.6.1)
       bootstrap-sass (~> 3.3.1)
       chartkick
       gruff
@@ -206,7 +206,7 @@ DEPENDENCIES
   globalize (~> 4.0.2)
   jbuilder (~> 1.2)
   jquery-rails
-  opinion (= 0.5.4)!
+  opinion (= 0.6.1)!
   rails (= 4.0.3)
   sass-rails (~> 4.0.3)
   sdoc
