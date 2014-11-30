@@ -36,28 +36,26 @@
     <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/forums/">Forum</a></li>
+        <% if respond_to?(:forem_admin?) && forem_admin? %>
+        <li><a href="/polls/">Polls</a></li>
+        <% end %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% if signed_in? %>
                 <li><a href="/edit_account">Edit account</a></li>
                 <li><a href="/sign_out">Sign Out</a></li>
-                <% if forem_admin? %>
-                    <li><a href="/forums/admin">Admin Area</a></li>
-                <% end %>
+            <% if respond_to?(:forem_admin?) && forem_admin? %>
+                <li><a href="/forums/admin">Admin Area</a></li>
+            <% end %>
             <% else %>
                 <li><a href="/sign_in">Sign In</a></li>
             <% end %>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
       </ul>
-      <% if forem_user %>
-          <p class="navbar-text navbar-right">Signed in as <a href="/edit_account" class="navbar-link"><%= forem_user.name %></a></p>
+      <% if respond_to?(:forem_user) && forem_user %>
+        <p class="navbar-text navbar-right">Signed in as <a href="/edit_account" class="navbar-link"><%= forem_user.name %></a></p>
       <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -66,7 +64,6 @@
 <div class="container">
   <%= bootstrap_devise_messages! %>
   <%= yield %>
-</div>
-
+</div> <!-- closing container div -->
 </body>
 </html>
