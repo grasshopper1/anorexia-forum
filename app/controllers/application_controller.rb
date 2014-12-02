@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
 
 	before_action :configure_devise_permitted_parameters, if: :devise_controller?
+	before_action :set_locale
 
 	protected
 
@@ -23,6 +24,20 @@ class ApplicationController < ActionController::Base
 			devise_parameter_sanitizer.for(:sign_up) {
 					|u| u.permit(registration_params)
 			}
+		end
+	end
+
+	# Set the correct default locale.
+	#
+	# Use the locale from current signed-in user or the default locale when no user is signed in.
+	#
+	# @see ApplicationController#extract_locale_from_user
+	# noinspection RubyResolve
+	def set_locale
+		if current_user
+			I18n.locale = current_user.country.locale.to_sym
+		else
+			I18n.locale = I18n.default_locale
 		end
 	end
 end
