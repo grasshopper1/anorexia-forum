@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
 		if params[:action] == 'update'
 			devise_parameter_sanitizer.for(:account_update) {
-					|u| u.permit(registration_params << :current_password, {roles: []})
+					|u| u.permit(registration_params << :current_password, {role_ids: []})
 			}
 		elsif params[:action] == 'create'
 			devise_parameter_sanitizer.for(:sign_up) {

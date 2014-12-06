@@ -1,0 +1,8 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+de:
+  devise:
+    registrations:
+      confirmation_info: "Wir müssen das aktuelle Passwort haben, um die Änderungen zu bestätigen"
+      edit: "Benutzer bearbeiten"
+      roles: "Rollen"

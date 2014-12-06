@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-	ROLES = %w[admin moderator banned]
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable and :omniauthable
 	devise :database_authenticatable, :registerable,
@@ -11,6 +10,7 @@ class User < ActiveRecord::Base
 	validates :name, uniqueness: true
 
 	belongs_to :country
+	has_and_belongs_to_many :roles
 
 	def forem_name
 		name
@@ -21,16 +21,6 @@ class User < ActiveRecord::Base
 	end
 
 	def forem_admin?
-		roles.include? 'admin'
-	end
-
-	def roles=(roles)
-		self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.inject(0, :+)
-	end
-
-	def roles
-		ROLES.reject do |r|
-			((roles_mask.to_i || 0) & 2**ROLES.index(r)).zero?
-		end
+		!roles.select { |role| role.admin? }.empty?
 	end
 end

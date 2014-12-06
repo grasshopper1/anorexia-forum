@@ -43,6 +43,8 @@ en:
       confirmation_info: "We need your current password to confirm your changes"
       password_info: "%{count} characters minimum"
       language: "Language"
+      edit: "Edit User"
+      roles: "Roles"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."

@@ -1,2 +1,24 @@
 nl:
-  hello: "Hallo Wereld!"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Naam mag niet leeg zijn"
+            email:
+              blank: "E-mail mag niet leeg zijn"
+            password:
+              too_short: "Wachtwoord is te kort"
+            password_confirmation:
+              confirmation: "Vergelijkings wachtwoord moet gelijk zijn"
+            current_password:
+              blank: "Huidig wachtwoord mag niet leeg zijn"
+    attributes:
+      user:
+        name: "Naam"
+        email: "E-mail"
+        password: "Wachtwoord"
+        password_confirmation: "Vergelijkings wachtwoord"
+        current_password: "Huidig wachtwoord"
+        roles: "Rollen"

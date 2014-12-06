@@ -20,6 +20,55 @@ languages = {
 				},
 }
 
+roles = {
+		:en =>
+				{
+						:admin => 'Administrator',
+						:moderator => 'Moderator',
+						:banned => 'Banned',
+				},
+		:nl =>
+				{
+						:admin => 'Beheerder',
+						:moderator => 'Bemiddelaar',
+						:banned => 'Verbannen',
+				},
+		:de =>
+				{
+						:admin => 'Verwalter',
+						:moderator => 'Vermittler',
+						:banned => 'Exil',
+				},
+}
+
+admin_role = Role.create(:name => 'Administrator')
+admin_role.admin!
+admin_role.save
+moderator_role = Role.create(:name => 'Moderator')
+moderator_role.moderator!
+moderator_role.save
+banned_role = Role.create(:name => 'Moderator')
+banned_role.banned!
+banned_role.save
+
+roles.each do |locale, roles|
+	I18n.locale = locale
+
+	roles.each do |role_locale, value|
+		role = case role_locale
+		          when :admin
+			          admin_role
+		          when :moderator
+			          moderator_role
+		          when :banned
+			          banned_role
+	          end
+
+		role.name = value
+		role.save
+	end
+end
+
 en_country = Country.new(:locale => :en, :plural => 'England', :route_name => 'english')
 nl_country = Country.new(:locale => :nl, :plural => 'Nederland', :route_name => 'nederlands')
 de_country = Country.new(:locale => :de, :plural => 'Deutschland', :route_name => 'deutsch')
@@ -47,7 +96,7 @@ User.create!(:name => 'Administrator',
              :email => 'admin@anorexia-forum.com',
              :password => 'password',
              :password_confirmation => 'password',
-             :roles => ['admin'],
+             :roles => [admin_role],
              :country_id => en_country.id)
 
 # Keep this in track with the route_names of the countries!

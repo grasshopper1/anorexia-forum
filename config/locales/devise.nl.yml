@@ -43,6 +43,8 @@ nl:
       confirmation_info: "Je huidige wachtwoord is nodig om je veranderingen door te voeren"
       password_info: "Minimaal %{count} karakters"
       language: "Taal"
+      edit: "Wijzig Gebruiker"
+      roles: "Rollen"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."

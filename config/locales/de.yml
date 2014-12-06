@@ -1,0 +1,24 @@
+de:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Name darf nicht leer sein"
+            email:
+              blank: "E-Mail darf nicht leer sein"
+            password:
+              too_short: "Passwort ist zu kurz"
+            password_confirmation:
+              confirmation: "Bestätigung Passwort muss gleich sein"
+            current_password:
+              blank: "Aktuelles Passwort darf nicht leer sein"
+    attributes:
+      user:
+        name: "Name"
+        email: "E-Mail"
+        password: "Passwort"
+        password_confirmation: "Bestätigung Passwort"
+        current_password: "Aktuelles Passwort"
+        roles: "Eigenschaften"

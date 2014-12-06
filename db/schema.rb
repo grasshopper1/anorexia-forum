@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122191417) do
+ActiveRecord::Schema.define(version: 20141210184521) do
 
   create_table "countries", force: true do |t|
     t.string   "locale"
@@ -156,6 +156,30 @@ ActiveRecord::Schema.define(version: 20141122191417) do
   add_index "opinion_votes", ["voter_id", "voter_type", "voteable_id", "voteable_type"], name: "fk_one_vote_per_user_per_entity", unique: true
   add_index "opinion_votes", ["voter_id", "voter_type"], name: "index_opinion_votes_on_voter_id_and_voter_type"
 
+  create_table "role_translations", force: true do |t|
+    t.integer  "role_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "role_translations", ["locale"], name: "index_role_translations_on_locale"
+  add_index "role_translations", ["role_id"], name: "index_role_translations_on_role_id"
+
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.integer  "role"
+    t.integer  "integer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles_users", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",               null: false
     t.string   "encrypted_password",     default: "",               null: false
@@ -173,7 +197,6 @@ ActiveRecord::Schema.define(version: 20141122191417) do
     t.string   "forem_state",            default: "pending_review"
     t.boolean  "forem_auto_subscribe",   default: false
     t.string   "name"
-    t.integer  "roles_mask"
     t.integer  "country_id"
   end
 
