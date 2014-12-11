@@ -45,6 +45,10 @@ nl:
       language: "Taal"
       edit: "Wijzig Gebruiker"
       roles: "Rollen"
+      cancel: "Annuleer mijn account"
+      areyousure: "Weet je het zeker?"
+      back: "Terug"
+      unhappy: "Ongelukkig?"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."

@@ -45,6 +45,10 @@ en:
       language: "Language"
       edit: "Edit User"
       roles: "Roles"
+      cancel: "Cancel my account"
+      areyousure: "Are you sure?"
+      back: "Back"
+      unhappy: "Unhappy?"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
