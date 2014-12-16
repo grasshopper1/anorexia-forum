@@ -1,5 +1,6 @@
 Forem::ForumsController.class_eval do
 	# include ForemHelper
+	include LocaleFromUser
 
 	def index
 		if forem_admin?
