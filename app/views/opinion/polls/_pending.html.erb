@@ -1,9 +1,9 @@
-<h1>Pending polls</h1>
+<h1><%= t('.pending_polls') %></h1>
 
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Question</th>
+      <th><%= t('.question') %></th>
       <th></th> <!-- show-header -->
       <th></th> <!-- edit-header -->
       <% if show_activate? %>
@@ -17,12 +17,12 @@
     <% pending.each do |poll| %>
       <tr>
         <td><%= poll.question %></td>
-        <td><%= link_to 'Show', poll, :class => 'btn btn-default' %></td>
-        <td><%= link_to 'Edit', edit_poll_path(poll), :class => 'btn btn-default' %></td>
+        <td><%= link_to t('.show'), poll, :class => 'btn btn-default' %></td>
+        <td><%= link_to t('.edit'), edit_poll_path(poll), :class => 'btn btn-default' %></td>
         <% if show_activate? %>
-        <td><%= link_to 'Activate', opinion.activate_poll_path(poll), :class => 'btn btn-default', method: :post, data: { confirm: 'Are you sure you want to activate the poll?' } %></td>
+        <td><%= link_to t('.activate'), opinion.activate_poll_path(poll), :class => 'btn btn-default', method: :post, data: { confirm: t('.activate_confirm') } %></td>
         <% end %>
-        <td><%= link_to 'Destroy', poll, :class => 'btn btn-default', method: :delete, data: { confirm: 'Are you sure you want to destroy the poll?' } %></td>
+        <td><%= link_to t('.destroy'), poll, :class => 'btn btn-default', method: :delete, data: { confirm: t('.destroy_confirm') } %></td>
       </tr>
     <% end %>
   </tbody>

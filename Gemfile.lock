@@ -31,9 +31,9 @@ GIT
 
 GIT
   remote: https://github.com/grasshopper1/Opinion.git
-  revision: 23fde4e948c9310d48033ce30b2a54ace725bcba
+  revision: 6c9f77ab613f2c6da6ee1dc85d11d78bbc0aa53c
   specs:
-    opinion (0.6.2)
+    opinion (0.7.0)
       bootstrap-sass (~> 3.3.1)
       chartkick
       gruff
@@ -118,7 +118,7 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     mini_portile (0.6.1)
-    minitest (5.4.3)
+    minitest (5.5.0)
     multi_json (1.10.1)
     nested_form (0.3.2)
     nokogiri (1.6.4.1)
@@ -208,7 +208,7 @@ DEPENDENCIES
   globalize (~> 4.0.2)
   jbuilder (~> 1.2)
   jquery-rails
-  opinion (= 0.6.2)!
+  opinion (= 0.7.0)!
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc

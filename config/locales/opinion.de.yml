@@ -1,0 +1,100 @@
+de:
+  opinion:
+    polls:
+      index:
+        no_polls_defined: "Keine Umfragen definiert"
+        new: "Neue Umfrage"
+      new:
+        new: "Neue Umfrage"
+      form:
+        create: "Neue Umfrage erstellen"
+        edit: "Umfrage bearbeiten"
+        add_option: "Möglichkeit beifügen"
+        prohibited_from_saved:
+          one: "1 Fehler verboten diese Umfrage nicht gespeichert:"
+          other: "%{count} Fehlers verboten diese Umfrage nicht gespeichert:"
+      new_buttons:
+        back: "Zurück"
+      create:
+        created: "Neue Umfrage ist erfolgreich erstellt"
+      update:
+        updated: "Umfrage ist erfolgreich bearbeitet"
+      destroy:
+        destroyed: "Umfrage ist erfolgreich entfernt"
+      end:
+        ended: "Umfrage wurde erfolgreich abgeschlossen"
+        not_ended: "Umfrage kann nicht beendet werden"
+      activate:
+        not_ended_activated: "Eine aktivierte Umfrage kann nicht beendet werden"
+        activated: "Umfrage ist erfolgreich aktiviert"
+        not_activated: "Umfrage kann nicht aktiviert werden"
+      active:
+        active_poll: "Aktive Umfrage"
+        question: "Frage"
+        show: "Anzeigen"
+        edit: "Bearbeiten"
+        end: "Ende"
+      pending:
+        pending_polls: "Anstehenden Umfragen"
+        question: "Frage"
+        show: "Anzeigen"
+        edit: "Bearbeiten"
+        activate: "Aktivieren"
+        activate_confirm: "Sind Sie sicher die Umfrage zu aktivieren?"
+        destroy: "Entfern"
+        destroy_confirm: "Sind Sie sicher die Umfrage zu entfernen?"
+      ended:
+        ended_polls: "Beëindigde Peilingen"
+        question: "Frage"
+        show: "Anzeigen"
+        destroy: "Entfern"
+        destroy_confirm: "Sind Sie sicher die Umfrage zu entfernen?"
+      show:
+        engine_not_supported: "Tabelle Software %{engine} wird nicht unterstützt"
+        no_votes_exists: "Der Umfrage enthalten keine Stimmen"
+        edit: "Bearbeit Umfrage"
+        back: "Zurück"
+      edit_buttons:
+        show: "Anzeigen"
+        back: "Zurück"
+      poll_modal:
+        title: "Bitte stimmen"
+        vote: "Stimme"
+        vote_later: "Später stimmen"
+        close: "Schließen"
+      edit:
+        edit_polls: "Bearbeite Umfrage"
+    options:
+      create:
+        created: "Möglichkeit ist erfolgreich erstellt"
+      update:
+        updated: "Möglichkeit ist erfolgreich bearbeitet"
+      destroy:
+        destroyed: "Möglichkeit ist erfolgreich entfernt"
+  activerecord:
+    attributes:
+      opinion/poll:
+        question: "Frage"
+        option: "Möglichkeit"
+        options: "Möglichkeiten"
+      opinion/poll/options:
+        description:
+          one: "Möglichkeit Beschreibung"
+          other: "Möglichkeit Beschreibungen"
+      opinion/option:
+        description: "Beschreibung"
+    errors:
+      models:
+        opinion/poll:
+          attributes:
+            question:
+              blank: "darf nicht leer sein"
+            options:
+              at_least_two: "mindestens zwei müssen definiert werden"
+        opinion/option:
+          attributes:
+            description:
+              blank: "darf nicht leer sein"
+            less_than_or_equal_to:
+              one: "Ein Möglichkeit sollte festgelegt werden"
+              other: "#{count} Möglichkeiten sollte festgelegt werden"

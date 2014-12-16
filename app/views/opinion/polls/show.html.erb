@@ -5,12 +5,12 @@
     <% elsif Opinion.configuration.charts_engine == :google_charts %>
       <%= pie_chart @poll.options_chart_data, library: {title: @poll.question} %>
     <% else %>
-      <h3>Chart Engine <%= Opinion.configuration.charts_engine.inspect %> is not supported</h3>
+      <h3><%= t('.engine_not_supported', :engine => Opinion.configuration.charts_engine.inspect) %> </h3>
     <% end %>
   <% else %>
-    <h3>No votes for poll exists</h3>
+    <h3><%= t('.no_votes_exists') %></h3>
   <% end %>
 </div>
 
-<%= link_to 'Edit', edit_poll_path(@poll), :class => 'btn btn-default' %>
-<%= link_to 'Back', polls_path, :class => 'btn btn-default' %>
+<%= link_to t('.edit'), edit_poll_path(@poll), :class => 'btn btn-default' %>
+<%= link_to t('.back'), polls_path, :class => 'btn btn-default' %>

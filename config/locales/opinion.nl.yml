@@ -1,0 +1,100 @@
+nl:
+  opinion:
+    polls:
+      index:
+        no_polls_defined: "Geen Peilingen gedefinieerd"
+        new: "Nieuwe Peiling"
+      new:
+        new: "Nieuwe Peiling"
+      form:
+        create: "Nieuwe Peiling maken"
+        edit: "Peiling wijzigen"
+        add_option: "Optie toevoegen"
+        prohibited_from_saved:
+          one: "1 fout voorkwam dat deze peiling opgeslagen kon worden:"
+          other: "%{count} fouten voorkwamen dat deze peiling opgeslagen kon worden:"
+      new_buttons:
+        back: "Terug"
+      create:
+        created: "Nieuwe peiling is succesvol aangemaakt"
+      update:
+        updated: "Peiling is succesvol bewerkt"
+      destroy:
+        destroyed: "Peiling is succesvol verwijderd"
+      end:
+        ended: "Peiling is succesvol beëindigd"
+        not_ended: "Kan Peiling niet beëindigen"
+      activate:
+        not_ended_activated: "Een geactiveerde Peiling kan niet worden beëindigen"
+        activated: "Peiling is succesvol geactiveerd"
+        not_activated: "Kan Peiling niet activeren"
+      active:
+        active_poll: "Actieve Peiling"
+        question: "Vraag"
+        show: "Bekijk"
+        edit: "Wijzig"
+        end: "Beëindig"
+      pending:
+        pending_polls: "Niet gestarte Peilingen"
+        question: "Vraag"
+        show: "Bekijk"
+        edit: "Wijzig"
+        activate: "Activeer"
+        activate_confirm: "Weet je zeker dat je de peiling wil activeren?"
+        destroy: "Verwijder"
+        destroy_confirm: "Weet je zeker dat je de peiling wil verwijderen?"
+      ended:
+        ended_polls: "Beëindigde Peilingen"
+        question: "Vraag"
+        show: "Bekijk"
+        destroy: "Verwijder"
+        destroy_confirm: "Weet je zeker dat je de peiling wil verwijderen?"
+      show:
+        engine_not_supported: "Tabel software %{engine} wordt niet ondersteund"
+        no_votes_exists: "Er bestaan geen stemmen voor deze peiling"
+        edit: "Wijzig Peiling"
+        back: "Terug"
+      edit_buttons:
+        show: "Bekijk"
+        back: "Terug"
+      poll_modal:
+        title: "Stem alstublieft"
+        vote: "Stem"
+        vote_later: "Stem later"
+        close: "Sluit"
+      edit:
+        edit_polls: "Wijzig Peiling"
+    options:
+      create:
+        created: "Optie is succesvol aangemaakt"
+      update:
+        updated: "Optie is succesvol bewerkt"
+      destroy:
+        destroyed: "Optie is succesvol verwijderd"
+  activerecord:
+    attributes:
+      opinion/poll:
+        question: "Vraag"
+        option: "Optie"
+        options: "Opties"
+      opinion/poll/options:
+        description:
+          one: "Optie beschrijving"
+          other: "Optie beschrijvingen"
+      opinion/option:
+        description: "Optie beschrijving"
+    errors:
+      models:
+        opinion/poll:
+          attributes:
+            question:
+              blank: "mag niet leeg zijn"
+            options:
+              at_least_two: "minstens twee moeten bestaan"
+        opinion/option:
+          attributes:
+            description:
+              blank: "mag niet leeg zijn"
+            less_than_or_equal_to:
+              one: "Een optie moet aangemaakt zijn"
+              other: "#{count} opties moeten aangemaakt worden"
