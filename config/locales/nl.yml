@@ -22,3 +22,13 @@ nl:
         password_confirmation: "Vergelijkings wachtwoord"
         current_password: "Huidig wachtwoord"
         roles: "Rollen"
+  layouts:
+    application:
+      forum: "Forum"
+      polls: "Peilingen"
+      register: "Registreer"
+      edit_account: "Wijzig gebruiker"
+      sign_out: "Uitloggen"
+      admin_area: "Beheerders Gedeelte"
+      sign_in: "Inloggen"
+      signed_in_as: "Ingelogd als %{link}"

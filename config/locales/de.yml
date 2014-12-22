@@ -22,3 +22,13 @@ de:
         password_confirmation: "Bestätigung Passwort"
         current_password: "Aktuelles Passwort"
         roles: "Eigenschaften"
+  layouts:
+    application:
+      forum: "Foren"
+      polls: "Umfragen"
+      register: "Registrieren"
+      edit_account: "Edit Konto"
+      sign_out: "Abmelden"
+      admin_area: "Admin-Bereich"
+      sign_in: "Anmelden"
+      signed_in_as: "Angemeldet als %{link}"

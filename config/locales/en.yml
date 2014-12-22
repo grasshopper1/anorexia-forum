@@ -20,4 +20,36 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Name cannot be blank"
+            email:
+              blank: "E-mail cannot be blank"
+            password:
+              too_short: "Password is too short"
+            password_confirmation:
+              confirmation: "Password doesn't match confirmation"
+            current_password:
+              blank: "Current password cannot be blank"
+    attributes:
+      user:
+        name: "Name"
+        email: "E-mail"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+        roles: "Roles"
+  layouts:
+    application:
+      forum: "Forum"
+      polls: "Polls"
+      register: "Register"
+      edit_account: "Edit account"
+      sign_out: "Sign out"
+      admin_area: "Admin Area"
+      sign_in: "Sign in"
+      signed_in_as: "Signed in as %{link}"
