@@ -21,7 +21,6 @@
 
 <h5><%= t('devise.registrations.cancel') %></h5>
 
-<!-- TODO add bootstrap buttons -->
 <p><%= t('devise.registrations.unhappy') %> <%= button_to t('devise.registrations.cancel'), registration_path(resource_name), data: { confirm: t('devise.registrations.areyousure')}, method: :delete, class: 'btn btn-primary btn-xs' %></p>
 
 <%= link_to t('devise.registrations.back'), :back %>
