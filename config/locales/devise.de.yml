@@ -10,3 +10,10 @@ de:
       areyousure: "Sind sie sicher?"
       back: "Zurück"
       unhappy: "Unglücklich?"
+      updated: "Ihr Konto wurde erfolgreich aktualisiert."
+    sessions:
+      signed_in: "Erfolgreich angemeldet."
+      signed_out: "Erfolgreich abgemeldet."
+      already_signed_out: "Erfolgreich abgemeldet."
+      signed_up: "Herzlich Willkommen! Sie haben erfolgreich eingeschrieben."
+      updated: "Ihr Konto wurde erfolgreich aktualisiert."
