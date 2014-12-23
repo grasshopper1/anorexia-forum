@@ -3,3 +3,5 @@ en:
     admin:
       categories:
         new: "Create Category"
+    categories:
+      cannot_retrieve_country: "Something went wrong trying to retrieve your selected country"

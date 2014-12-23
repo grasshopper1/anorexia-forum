@@ -4,3 +4,5 @@ de:
       back_to_admin: "Zurück zum Administrations Bereich"
       back_to_forums: "Zurück zum Foren"
       back_to_groups: "Zurück zum Gruppen"
+    categories:
+      cannot_retrieve_country: "Es gab einen Fehler beim laden vom auswählende land"

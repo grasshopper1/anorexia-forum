@@ -9,8 +9,7 @@ Forem::ForumsController.class_eval do
 			category = Forem::Category.find(forem_user.country.route_name)
 
 			if category.nil?
-				# TODO make this localized
-				flash[:alert] = 'Something went wrong trying to retrieve your selected country'
+				flash[:alert] = t('forem.categories.cannot_retrieve_country')
 				redirect_to('/info_page/about')
 			else
 				redirect_to(category_path(category))

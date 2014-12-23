@@ -6,3 +6,5 @@ nl:
       back_to_groups: "Terug naar groepen"
       categories:
         new: "Nieuw categorie aanmaken"
+    categories:
+      cannot_retrieve_country: "Er ging iets fout bij het ophalen van het geselecteerde land"
