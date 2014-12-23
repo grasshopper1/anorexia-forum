@@ -8,9 +8,8 @@
     <%= f.password_field( :current_password, :control_col => 'col-sm-6', :autocomplete => 'off', :help => "(#{t('devise.registrations.confirmation_info')})" ) %>
     <%= f.select :country_id, Country.all.collect { |c| [c.language, c.id] }, :control_col => 'col-sm-6', :label => t('devise.registrations.language') %>
 
-    <!-- TODO Only admins can edit user roles -->
     <div class="form-group">
-      <%= f.collection_check_boxes :role_ids, Role.all, :id, :name, :label => t('devise.registrations.roles') %>
+      <%= f.collection_check_boxes :role_ids, Role.all, :id, :name, :label => t('devise.registrations.roles'), :disabled => !(respond_to?(:forem_admin?) && forem_admin?) %>
     </div>
 
     <div class="form-group">
