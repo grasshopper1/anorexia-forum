@@ -1,6 +1,7 @@
 module LocaleFromUser
 	extend ActiveSupport::Concern
 
+	# noinspection RubyArgCount
 	included do
 		before_action :set_locale
 	end
