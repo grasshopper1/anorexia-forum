@@ -65,6 +65,7 @@ nl:
         close: "Sluit"
       edit:
         edit_polls: "Wijzig Peiling"
+        already_voted: "Peiling kan niet worden bewerkt, omdat deze stemmen bevat"
     options:
       create:
         created: "Optie is succesvol aangemaakt"

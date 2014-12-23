@@ -65,6 +65,7 @@ de:
         close: "Schließen"
       edit:
         edit_polls: "Bearbeite Umfrage"
+        already_voted: "Umfrage kann nicht bearbeitet werden, weil sie Stimme enthalten"
     options:
       create:
         created: "Möglichkeit ist erfolgreich erstellt"

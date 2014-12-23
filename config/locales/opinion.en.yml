@@ -15,8 +15,6 @@ en:
           other: "%{count} errors prohibited this poll from being saved:"
       new_buttons:
         back: "Back"
-      edit:
-        already_voted: "Unable to edit poll which which has already voted for"
       create:
         created: "Poll was successfully created"
       update:
@@ -67,6 +65,7 @@ en:
         close: "Close"
       edit:
         edit_polls: "Edit Poll"
+        already_voted: "Unable to edit poll which has already voted for"
     options:
       create:
         created: "Option was successfully created"
