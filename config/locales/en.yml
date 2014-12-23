@@ -35,6 +35,7 @@ en:
               confirmation: "Password doesn't match confirmation"
             current_password:
               blank: "Current password cannot be blank"
+              invalid: "Current password is invalid"
     attributes:
       user:
         name: "Name"
