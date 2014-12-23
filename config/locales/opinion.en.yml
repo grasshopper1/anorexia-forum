@@ -93,6 +93,7 @@ en:
               blank: "cannot be blank"
             options:
               at_least_two: "at least two should be defined"
+              unique: "should be unique"
         opinion/option:
           attributes:
             description:

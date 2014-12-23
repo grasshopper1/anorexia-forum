@@ -93,6 +93,7 @@ nl:
               blank: "mag niet leeg zijn"
             options:
               at_least_two: "minstens twee moeten bestaan"
+              unique: "moeten uniek zijn"
         opinion/option:
           attributes:
             description:
