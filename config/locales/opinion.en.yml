@@ -36,6 +36,7 @@ en:
         show: "Show"
         edit: "Edit"
         end: "End"
+        end_confirm: "Are you sure you want to end the poll?"
       pending:
         pending_polls: "Pending Polls"
         question: "Question"

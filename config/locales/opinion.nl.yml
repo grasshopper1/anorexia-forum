@@ -34,6 +34,7 @@ nl:
         show: "Bekijk"
         edit: "Wijzig"
         end: "Beëindig"
+        end_confirm: "Weet je zeker dat je de peiling wil beëindigen?"
       pending:
         pending_polls: "Niet gestarte Peilingen"
         question: "Vraag"

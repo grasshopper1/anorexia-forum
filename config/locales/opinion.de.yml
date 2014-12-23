@@ -34,6 +34,7 @@ de:
         show: "Anzeigen"
         edit: "Bearbeiten"
         end: "Ende"
+        end_confirm: "Sind Sie sicher, dass die Umfrage enden soll?"
       pending:
         pending_polls: "Anstehenden Umfragen"
         question: "Frage"
