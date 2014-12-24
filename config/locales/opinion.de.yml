@@ -45,7 +45,7 @@ de:
         destroy: "Entfern"
         destroy_confirm: "Sind Sie sicher die Umfrage zu entfernen?"
       ended:
-        ended_polls: "Beëindigde Peilingen"
+        ended_polls: "Beendete Umfragen"
         question: "Frage"
         show: "Anzeigen"
         destroy: "Entfern"
