@@ -1,3 +1,4 @@
+# encoding: utf-8
 # languages available
 languages = {
 		:en =>

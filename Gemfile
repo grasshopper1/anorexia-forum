@@ -45,6 +45,8 @@ gem 'gemoji'
 
 gem 'opinion', '1.3.0', :git => 'https://github.com/grasshopper1/Opinion.git'
 gem 'devise-i18n'
+
+gem 'webrick', '~> 1.3.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
