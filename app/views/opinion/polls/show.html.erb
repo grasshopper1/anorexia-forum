@@ -12,5 +12,7 @@
   <% end %>
 </div>
 
+<% if !@poll.voted? && !@poll.ended? %>
 <%= link_to t('.edit'), edit_poll_path(@poll), :class => 'btn btn-default' %>
+<% end %>
 <%= link_to t('.back'), polls_path, :class => 'btn btn-default' %>
